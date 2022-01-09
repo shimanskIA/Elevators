@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C980949D-2A0F-4326-A79F-5550FA035F38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Lab2GUI</RootNamespace>
+    <AssemblyName>Lab2GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SimulationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimulationView.Designer.cs">
+      <DependentUpon>SimulationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetRuleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetRuleView.Designer.cs">
+      <DependentUpon>SetRuleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimulationParametersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimulationParametersView.Designer.cs">
+      <DependentUpon>SimulationParametersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeSpeedView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeSpeedView.Designer.cs">
+      <DependentUpon>ChangeSpeedView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePeopleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatePeopleView.Designer.cs">
+      <DependentUpon>CreatePeopleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteRuleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteRuleView.Designer.cs">
+      <DependentUpon>DeleteRuleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatsView.Designer.cs">
+      <DependentUpon>StatsView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SimulationView.resx">
+      <DependentUpon>SimulationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetRuleView.resx">
+      <DependentUpon>SetRuleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimulationParametersView.resx">
+      <DependentUpon>SimulationParametersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeSpeedView.resx">
+      <DependentUpon>ChangeSpeedView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreatePeopleView.resx">
+      <DependentUpon>CreatePeopleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteRuleView.resx">
+      <DependentUpon>DeleteRuleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="StatsView.resx">
+      <DependentUpon>StatsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data Layer\DataLayer.csproj">
+      <Project>{3b710d36-f503-4527-99a2-fa4940bb74b6}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{5d2fc0a0-cea2-43cf-ad53-f4adf5f79b00}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentation\Presentation.csproj">
+      <Project>{80085623-0749-4865-a33c-75e27666f389}</Project>
+      <Name>Presentation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D2FC0A0-CEA2-43CF-AD53-F4ADF5F79B00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Elevator.cs" />
+    <Compile Include="Entities\EntityBase.cs" />
+    <Compile Include="Entities\FixedGenRule.cs" />
+    <Compile Include="Entities\Human.cs" />
+    <Compile Include="Entities\RandomGenRule.cs" />
+    <Compile Include="Entities\SpeedTiming.cs" />
+    <Compile Include="IChangeSpeedService.cs" />
+    <Compile Include="IDeleteRuleService.cs" />
+    <Compile Include="IParametersService.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IRuleService.cs" />
+    <Compile Include="ISimulationService.cs" />
+    <Compile Include="IStatsService.cs" />
+    <Compile Include="ITimer.cs" />
+    <Compile Include="IPeopleService.cs" />
+    <Compile Include="Service\ChangeSpeedService.cs" />
+    <Compile Include="Service\DeleteRuleService.cs" />
+    <Compile Include="Service\ParametersService.cs" />
+    <Compile Include="Service\PeopleService.cs" />
+    <Compile Include="Service\RuleService.cs" />
+    <Compile Include="Service\SimulationService.cs" />
+    <Compile Include="Service\StatsService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
